@@ -6,12 +6,10 @@ metadata:
 labels:
     app.kubernetes.io/name: {{ include "istio-azure-monitor-chart.name" . }}
     helm.sh/chart: {{ include "istio-azure-monitor-chart.chart" . }}
-    app.kubernetes.io/instance: {{ .Release.Name }}
     app.kubernetes.io/managed-by: {{ .Release.Service }}
 spec:
   selector:
      app.kubernetes.io/name: {{ include "istio-azure-monitor-chart.name" . }}
-     app.kubernetes.io/instance: {{ .Release.Name }}
   ports:
   - name: http2-in-port
     protocol: TCP

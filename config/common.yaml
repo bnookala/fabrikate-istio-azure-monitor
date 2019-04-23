@@ -1,0 +1,4 @@
+config:
+  istioNamespace: "istio-system"
+  instrumentation:
+    logLevel: Info
