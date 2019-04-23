@@ -1,0 +1,3 @@
+ame: fabrikate-istio-azure-monitor
+generator: "helm"
+path: "./chart"
