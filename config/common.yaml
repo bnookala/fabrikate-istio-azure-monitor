@@ -2,3 +2,4 @@ config:
   istioNamespace: "istio-system"
   instrumentation:
     logLevel: Info
+    watchingNamespaces: "default"
