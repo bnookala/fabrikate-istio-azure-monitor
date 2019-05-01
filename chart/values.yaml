@@ -7,8 +7,8 @@ replicaCount: 1
 istioNamespace: "istio-system"
 
 image:
-  repository: alkaplan/application-insights-istio-mixer-adapter
-  tag: pp1
+  repository: mcr.microsoft.com/applicationinsights/istiomixeradapter
+  tag: v0.2
   pullPolicy: Always
 
 instrumentation:
@@ -19,6 +19,7 @@ instrumentation:
   watchingNamespaces: "default"
    # Log level: Info is the default, Trace for detailed tracing, Error for errors only
   logLevel: Trace
+  adaptiveSamplingLimit: "1000"
 
 nameOverride: ""
 fullnameOverride: ""

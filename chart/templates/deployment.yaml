@@ -33,3 +33,5 @@ spec:
           value: {{ .Values.instrumentation.watchingNamespaces }}
         - name: ISTIO_MIXER_PLUGIN_LOG_LEVEL
           value: {{ .Values.instrumentation.logLevel }}
+        - name: ISTIO_MIXER_PLUGIN_AI_ADAPTIVE_SAMPLING_LIMIT
+          value: {{ .Values.instrumentation.adaptiveSamplingLimit }}
