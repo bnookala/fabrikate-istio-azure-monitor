@@ -12,8 +12,8 @@ The default configuration is as follows:
 istioNamespace: "istio-system"
 
 image:
-  repository: alkaplan/application-insights-istio-mixer-adapter
-  tag: pp1
+  repository: mcr.microsoft.com/applicationinsights/istiomixeradapter
+  tag: v0.2
   pullPolicy: Always
 
 instrumentation:
@@ -21,8 +21,10 @@ instrumentation:
   applicationInsightsKey: "00000000-0000-0000-0000-000000000000"
   # comma-separated list of Kubernetes namespaces to monitor. Leave empty if all namespaces must be monitored
   watchingNamespaces: "default"
-   # Log level: Info is the default, Trace for detailed tracing, Error for errors only
-  logLevel: Info
+  # Log level: Info is the default, Trace for detailed tracing, Error for errors only
+  logLevel: "Info"
+  # See https://docs.microsoft.com/en-us/azure/azure-monitor/app/sampling#types-of-sampling
+  adaptiveSamplingLimit: 1000
 ```
 
 To override the default configuration, you add a new configuration environment in the `./config` directory, following the convention in `prod.yaml` ie:
