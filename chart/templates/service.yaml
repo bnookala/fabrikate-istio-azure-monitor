@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: {{ include "istio-azure-monitor-chart.fullname" . }}
   namespace: {{ .Values.istioNamespace }}
-labels:
+  labels:
     app.kubernetes.io/name: {{ include "istio-azure-monitor-chart.name" . }}
     helm.sh/chart: {{ include "istio-azure-monitor-chart.chart" . }}
     app.kubernetes.io/managed-by: {{ .Release.Service }}

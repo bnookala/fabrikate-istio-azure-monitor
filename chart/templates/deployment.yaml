@@ -26,12 +26,12 @@ spec:
           containerPort: 6789
         env:
         - name: ISTIO_MIXER_PLUGIN_AI_INSTRUMENTATIONKEY
-          value: {{ .Values.instrumentation.applicationInsightsKey }}
+          value: {{ .Values.instrumentation.applicationInsightsKey | quote }}
         - name: ISTIO_MIXER_PLUGIN_AI_LIVE_METRICS_STREAM_AUTH_KEY
           value: ""
         - name: ISTIO_MIXER_PLUGIN_WATCHLIST_NAMESPACES
-          value: {{ .Values.instrumentation.watchingNamespaces }}
+          value: {{ .Values.instrumentation.watchingNamespaces | quote }}
         - name: ISTIO_MIXER_PLUGIN_LOG_LEVEL
-          value: {{ .Values.instrumentation.logLevel }}
+          value: {{ .Values.instrumentation.logLevel | quote}}
         - name: ISTIO_MIXER_PLUGIN_AI_ADAPTIVE_SAMPLING_LIMIT
-          value: {{ .Values.instrumentation.adaptiveSamplingLimit }}
+          value: {{ .Values.instrumentation.adaptiveSamplingLimit | quote }}
