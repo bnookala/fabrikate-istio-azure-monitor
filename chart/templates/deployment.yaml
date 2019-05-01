@@ -28,7 +28,7 @@ spec:
         - name: ISTIO_MIXER_PLUGIN_AI_INSTRUMENTATIONKEY
           value: {{ .Values.instrumentation.applicationInsightsKey }}
         - name: ISTIO_MIXER_PLUGIN_AI_LIVE_METRICS_STREAM_AUTH_KEY
-          value: {{ .Values.instrumentation.liveMetricsStreamKey }}
+          value: ""
         - name: ISTIO_MIXER_PLUGIN_WATCHLIST_NAMESPACES
           value: {{ .Values.instrumentation.watchingNamespaces }}
         - name: ISTIO_MIXER_PLUGIN_LOG_LEVEL

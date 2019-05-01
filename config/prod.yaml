@@ -2,5 +2,4 @@ config:
   instrumentation:
     logLevel: Trace
     applicationInsightsKey: "00000000-0000-0000-0000-000000000000"
-    liveMetricsStreamKey: "0000"
     watchingNamespaces: "default"

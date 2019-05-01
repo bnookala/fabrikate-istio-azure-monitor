@@ -19,7 +19,6 @@ image:
 instrumentation:
   # instrumentation key for the Application Insights resource to send telemetry to
   applicationInsightsKey: "00000000-0000-0000-0000-000000000000"
-  liveMetricsStreamKey: "0000"
   # comma-separated list of Kubernetes namespaces to monitor. Leave empty if all namespaces must be monitored
   watchingNamespaces: "default"
    # Log level: Info is the default, Trace for detailed tracing, Error for errors only
@@ -33,7 +32,6 @@ config:
   instrumentation:
     logLevel: Trace
     applicationInsightsKey: "00000000-0000-0000-0000-000000000000"
-    liveMetricsStreamKey: "0000"
     watchingNamespaces: "default"
 ```
 
